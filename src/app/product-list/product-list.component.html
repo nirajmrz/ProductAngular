@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Product List</h2>
+    <p>Use action to perform crud operations</p>
+    <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"> Id</th>
+        <th scope="col"> Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Made In</th>
+        <th scope="col"> Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products" >
+        <th scope="row">1</th>
+        <td>{{product.name}}</td>
+        <td>{{product.brand}}</td>
+        <td>{{product.madein}}</td>
+        <td>{{product.price}}</td>
+        <td>
+      
+          
+          <button class="btn btn-success" (click)="detail(product.id)">Details</button>&nbsp;&nbsp;
+          <button class="btn btn-primary" (click)="update(product.id)">Update</button>&nbsp;&nbsp;
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <a class="btn btn-success" routerLink="/addProduct">Add Product</a>
+
+</div>

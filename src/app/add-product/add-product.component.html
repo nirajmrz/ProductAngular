@@ -1,0 +1,26 @@
+<div class ="container">
+    <h2>Add new Product</h2>
+    <form (ngSubmit)="addProduct()">
+      
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input type="text" class="form-control" required [(ngModel)]="product.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price: </label>
+            <input type="text" class="form-control" required [(ngModel)]="product.price" name="price">
+        </div>
+        <div class="form-group">
+            <label for="brand">Brand: </label>
+            <input type="text" class="form-control" required [(ngModel)]="product.brand" name="brand">
+        </div>
+        <div class="form-group">
+            <label for="madeIn">Made In: </label>
+            <input type="text" class="form-control" required [(ngModel)]="product.madein" name="madeIn">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button> &nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary" (click)="gotoList()">Back</button>
+    </form>
+
+</div>
